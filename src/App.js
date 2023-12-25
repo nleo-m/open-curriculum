@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 import { ChakraProvider, Flex } from "@chakra-ui/react";
 import Stack from "./sections/stack";
 import Journey from "./sections/journey";
+import Projects from "./sections/projects";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Stack />
         <Journey />
+        <Projects />
       </Flex>
     </ChakraProvider>
   );
