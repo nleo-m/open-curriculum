@@ -3,6 +3,7 @@ import Navbar from "./components/navbar";
 
 import { ChakraProvider, Flex } from "@chakra-ui/react";
 import Stack from "./sections/stack";
+import Journey from "./sections/journey";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Navbar />
         <Header />
         <Stack />
+        <Journey />
       </Flex>
     </ChakraProvider>
   );
