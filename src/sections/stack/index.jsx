@@ -3,7 +3,7 @@ import { techStack } from "./techStackEnum";
 
 export default () => {
   return (
-    <Flex minH="300px" mt="48px">
+    <Flex minH="300px" mt="48px" paddingY="1.5em">
       <Flex w="100%" marginX="10%" direction="column">
         <Text fontSize="24px" fontWeight={600} mb="12px">
           Tech Stack
