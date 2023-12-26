@@ -6,6 +6,7 @@ import Stack from "./sections/stack";
 import Journey from "./sections/journey";
 import Projects from "./sections/projects";
 import Contact from "./sections/contact";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Journey />
         <Projects />
         <Contact />
+        <Footer />
       </Flex>
     </ChakraProvider>
   );
