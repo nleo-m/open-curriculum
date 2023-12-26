@@ -5,6 +5,7 @@ import { ChakraProvider, Flex } from "@chakra-ui/react";
 import Stack from "./sections/stack";
 import Journey from "./sections/journey";
 import Projects from "./sections/projects";
+import Contact from "./sections/contact";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Stack />
         <Journey />
         <Projects />
+        <Contact />
       </Flex>
     </ChakraProvider>
   );
