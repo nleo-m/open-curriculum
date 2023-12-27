@@ -51,9 +51,27 @@ export default () => {
   }, [currentOccupation]);
 
   return (
-    <Flex id="header" bg="gray.700" minH="300px" align="center" paddingY="1em">
-      <Flex w="100%" marginX="10%" justify="space-between">
-        <Flex w="100%" gap="24px">
+    <Flex
+      id="header"
+      bg="gray.700"
+      minH="300px"
+      align="center"
+      paddingY="2em"
+      mt="50px"
+    >
+      <Flex
+        w="100%"
+        marginX="10%"
+        justify="space-between"
+        direction={{ base: "column", lg: "row" }}
+      >
+        <Flex
+          w="100%"
+          gap="24px"
+          align="center"
+          direction={{ base: "column", md: "row" }}
+          mr="32px"
+        >
           <Box
             border="3px solid white"
             bg="gray.100"
@@ -68,7 +86,7 @@ export default () => {
               objectFit="cover"
             ></Image>
           </Box>
-          <Flex direction="column" gap="7px" w="60%">
+          <Flex direction="column" gap="7px" w={{ base: "100%", lg: "60%" }}>
             <Text color="white" fontWeight="bold" fontSize="24px" mt="10px">
               Leonel Marcos F J
             </Text>
@@ -119,7 +137,7 @@ export default () => {
             </Box>
           </Flex>
         </Flex>
-        <Flex gap="24px" maxW="50%">
+        <Flex gap="24px" align="center" maxW={{ base: "100%", lg: "60%" }}>
           <Flex direction="column" gap="7px">
             <Text color="white" fontSize="18px" mt="34px">
               Criativo, dedicado e sempre disposto a aprender. Me contrata aí e
