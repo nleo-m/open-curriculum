@@ -1,4 +1,12 @@
-import { Box, Flex, Image, Text, Tooltip, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Grid,
+  Image,
+  Text,
+  Tooltip,
+  VStack,
+} from "@chakra-ui/react";
 import { journey } from "./journeyEnum";
 
 export default () => {
@@ -8,7 +16,10 @@ export default () => {
         <Text fontSize="24px" fontWeight={600} mb="12px">
           Jornada
         </Text>
-        <Flex justify="space-between">
+        <Grid
+          justify="space-between"
+          templateColumns="repeat( auto-fit, minmax(300px, 1fr) )"
+        >
           {journey?.map((category) => (
             <Flex gap="24px" marginY="12px" flexWrap="wrap" direction="column">
               <Text fontSize="21px">{category?.title}</Text>
@@ -19,10 +30,9 @@ export default () => {
                   cursor="pointer"
                   transition="0.10s ease"
                   _hover={{ transform: "scale(1.05)" }}
-                  flexWrap="wrap"
                 >
                   <Box
-                    w={
+                    minW={
                       index == 0 && category?.title != "Complementar"
                         ? "32px"
                         : "22px"
@@ -57,7 +67,7 @@ export default () => {
               ))}
             </Flex>
           ))}
-        </Flex>
+        </Grid>
       </Flex>
     </Flex>
   );

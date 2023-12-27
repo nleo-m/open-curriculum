@@ -16,7 +16,7 @@ import { EyeIcon } from "../../styles/icons/GeneralIcons";
 
 export default ({ img, name, description, tech, repo, preview }) => {
   return (
-    <Card maxW="md" minW="md">
+    <Card maxW="md" minW={{ base: "200px", md: "480px" }}>
       <CardBody>
         <Image src={img} borderRadius="lg" />
         <VStack mt="6" spacing="3">

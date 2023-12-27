@@ -20,7 +20,7 @@ export default () => {
               fontSize="18px"
               padding="1em 2.5em"
               minW="280px"
-              w="480px"
+              w={{ base: "240px", md: "480px" }}
               marginY="1em"
               colorScheme="blue"
             >
