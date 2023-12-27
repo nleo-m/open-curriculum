@@ -1,7 +1,55 @@
+import { useState, useEffect } from "react";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { LocationIcon, EmailIcon } from "../../styles/icons/GeneralIcons";
 
 export default () => {
+  const occupations = [
+    "Programador Full-stack",
+    "UX Designer",
+    "Artista e Designer",
+    "Tatuador",
+    "Aspirante a escritor",
+  ];
+  const [currentOccupation, setCurrentOccupation] = useState(false);
+  const [occupationRender, setOcuppationRender] = useState("");
+
+  const writeWithDelay = (writable) => {
+    const updateOccupation = () => {
+      index++;
+
+      if (index < writable.length) {
+        setTimeout(updateOccupation, 100);
+
+        setOcuppationRender(
+          (occupationRender) =>
+            occupationRender.replace(" ▮", "") + writable[index] + " ▮"
+        );
+      } else {
+        setTimeout(nextOccupation, 1500);
+      }
+    };
+
+    setOcuppationRender("");
+    let index = -1;
+
+    updateOccupation();
+  };
+
+  const nextOccupation = () => {
+    const currentIndex = occupations.indexOf(currentOccupation);
+    const nextIndex = (currentIndex + 1) % occupations.length;
+
+    setCurrentOccupation(occupations[nextIndex]);
+  };
+
+  useEffect(() => {
+    setTimeout(nextOccupation, 500);
+  }, []);
+
+  useEffect(() => {
+    writeWithDelay(currentOccupation);
+  }, [currentOccupation]);
+
   return (
     <Flex id="header" bg="gray.700" minH="300px" align="center" paddingY="1em">
       <Flex w="100%" marginX="10%" justify="space-between">
@@ -24,8 +72,8 @@ export default () => {
             <Text color="white" fontWeight="bold" fontSize="24px" mt="10px">
               Leonel Marcos F J
             </Text>
-            <Flex gap="12px" align="center">
-              <Text color="gray.100" fontSize="18px">
+            <Flex align="center">
+              <Text color="gray.100" fontSize="18px" mr="12px">
                 Raça:
               </Text>
               <Text
@@ -33,8 +81,12 @@ export default () => {
                 fontSize="20px"
                 fontWeight="bolder"
                 decoration="line-through"
+                mr="4px"
               >
                 Alien
+              </Text>
+              <Text color="white" fontSize="20px" fontWeight="bolder">
+                Humano
               </Text>
             </Flex>
             <Flex gap="12px" align="center">
@@ -42,7 +94,7 @@ export default () => {
                 Classe:
               </Text>
               <Text color="blue.400" fontSize="20px" fontWeight="bolder">
-                Programador full-stack
+                {occupationRender}
               </Text>
             </Flex>
             <Box position="relative" minH="10px" w="100%" mt="12px">
