@@ -15,7 +15,7 @@ export default () => {
     <Flex id="contact" minH="300px" mt="48px" paddingY="1em">
       <Flex
         w="100%"
-        marginX="10%"
+        marginX={{ base: "none", md: "10%" }}
         direction="column"
         justify="center"
         align="center"
@@ -25,12 +25,14 @@ export default () => {
         </Text>
 
         <Flex
-          w="40%"
+          w={{ base: "90%", md: "75%", lg: "40%" }}
+          minW="300px"
           bg="gray.100"
-          padding="4em 2em"
+          padding={{ base: "1em", md: "3em 1.5em" }}
           borderRadius="12px"
           gap="32px"
           flexWrap="wrap"
+          align="center"
           justify="center"
           border="1px solid"
           borderColor="gray.200"
