@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 
 import { GitIcon } from "../../styles/icons/StackIcons";
+import { EyeIcon } from "../../styles/icons/GeneralIcons";
 
 export default ({ img, name, description, tech, repo, preview }) => {
   return (
@@ -33,15 +34,15 @@ export default ({ img, name, description, tech, repo, preview }) => {
       <CardFooter>
         <Flex gap="32px">
           <Flex align="center">
-            <GitIcon boxSize={8} mr="10px" fill="gray.600" />
             <Link href={repo} isExternal textDecoration="underline">
+              <GitIcon boxSize={8} mr="10px" fill="gray.600" />
               Repo
             </Link>
           </Flex>
           {preview && (
             <Flex align="center">
-              <GitIcon boxSize={8} mr="10px" fill="gray.600" />
               <Link href={preview} isExternal textDecoration="underline">
+                <EyeIcon boxSize={8} mr="10px" fill="gray.600" />
                 Preview
               </Link>
             </Flex>

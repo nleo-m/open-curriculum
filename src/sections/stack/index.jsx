@@ -3,7 +3,7 @@ import { techStack } from "./techStackEnum";
 
 export default () => {
   return (
-    <Flex minH="300px" mt="48px" paddingY="1.5em">
+    <Flex id="tech" minH="300px" mt="48px" paddingY="1.5em">
       <Flex w="100%" marginX="10%" direction="column">
         <Text fontSize="24px" fontWeight={600} mb="12px">
           Tech Stack
@@ -14,7 +14,9 @@ export default () => {
             <Flex gap="24px" marginY="12px" flexWrap="wrap">
               {category.items.map((i) => (
                 <Tooltip openDelay={550} label={i?.name}>
-                  <a target="blank" href={i?.url}>{i?.icon}</a>
+                  <a target="blank" href={i?.url}>
+                    {i?.icon}
+                  </a>
                 </Tooltip>
               ))}
             </Flex>
