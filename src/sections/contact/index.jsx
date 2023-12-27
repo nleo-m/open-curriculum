@@ -12,7 +12,7 @@ import {
 
 export default () => {
   return (
-    <Flex minH="300px" mt="48px">
+    <Flex id="contact" minH="300px" mt="48px" paddingY="1em">
       <Flex
         w="100%"
         marginX="10%"
@@ -71,7 +71,7 @@ export default () => {
               <Button
                 fontSize="18px"
                 padding="1em 2.5em"
-                w="75%"
+                w="100%"
                 marginY="1em"
                 colorScheme="blue"
                 type="submit"

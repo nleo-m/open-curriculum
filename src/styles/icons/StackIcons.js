@@ -5,6 +5,7 @@ export const ReactIcon = (props) => (
     viewBox="0 0 512 512"
     boxSize={20}
     transition=".25s ease"
+    fill="#102847"
     _hover={{ cursor: "pointer", transform: "scale(1.10)", fill: "blue.400" }}
     {...props}
   >
@@ -17,6 +18,7 @@ export const ReactNativeIcon = (props) => (
     viewBox="0 0 512 640"
     boxSize={20}
     transition=".25s ease"
+    fill="#102847"
     _hover={{ cursor: "pointer", transform: "scale(1.10)", fill: "teal.400" }}
     {...props}
   >
@@ -32,6 +34,7 @@ export const VueIcon = (props) => (
     viewBox="0 0 512 512"
     boxSize={20}
     transition=".25s ease"
+    fill="#102847"
     _hover={{ cursor: "pointer", transform: "scale(1.10)", fill: "green.400" }}
     {...props}
   >
@@ -45,6 +48,7 @@ export const NodeIcon = (props) => (
     viewBox="0 0 16 16"
     boxSize={20}
     transition=".25s ease"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -61,8 +65,9 @@ export const JavascriptIcon = (props) => (
     viewBox="0 0 512 512"
     boxSize={20}
     transition=".25s ease"
-    background="black"
+    background="#102847"
     textColor="white"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -81,6 +86,7 @@ export const HTMLIcon = (props) => (
     viewBox="10 0 256 300"
     boxSize={20}
     transition=".25s ease"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -112,6 +118,7 @@ export const CSSIcon = (props) => (
     viewBox="0 0 512 512"
     boxSize={20}
     transition=".25s ease"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -133,7 +140,7 @@ export const PHPIcon = (props) => (
     viewBox="0 0 32 32"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -166,6 +173,7 @@ export const LaravelIcon = (props) => (
     viewBox="0 0 32 32"
     boxSize={20}
     transition=".25s ease"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -182,7 +190,7 @@ export const PythonIcon = (props) => (
     viewBox="0 0 512 512"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -211,7 +219,7 @@ export const DjangoIcon = (props) => (
     viewBox="0 0 512 512"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -235,7 +243,7 @@ export const CSharpIcon = (props) => (
     viewBox="0 0 512 512"
     boxSize={20}
     transition=".25s ease"
-    background="black"
+    background="#102847"
     textColor="white"
     _hover={{
       cursor: "pointer",
@@ -255,7 +263,7 @@ export const GitIcon = (props) => (
     viewBox="0 0 32 32"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -272,7 +280,7 @@ export const ExpressIcon = (props) => (
     viewBox="0 0 24 24"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -289,7 +297,7 @@ export const ContextIcon = (props) => (
     viewBox="0 0 512 960"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -312,7 +320,7 @@ export const JWTIcon = (props) => (
     viewBox="0 0 24 24"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -329,7 +337,7 @@ export const DockerIcon = (props) => (
     viewBox="0 0 32 32"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -346,7 +354,7 @@ export const PostgresIcon = (props) => (
     viewBox="0 0 32 32"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -363,7 +371,7 @@ export const MySQLIcon = (props) => (
     viewBox="0 0 32 32"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -380,7 +388,7 @@ export const PostmanIcon = (props) => (
     viewBox="0 0 32 32"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -397,7 +405,7 @@ export const FigmaIcon = (props) => (
     viewBox="0 0 24 24"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -414,7 +422,7 @@ export const TrelloIcon = (props) => (
     viewBox="0 0 32 32"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -431,7 +439,7 @@ export const BurpIcon = (props) => (
     viewBox="0 0 48 48"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -448,7 +456,7 @@ export const GithubIcon = (props) => (
     viewBox="0 0 16 16"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -465,7 +473,7 @@ export const BitbucketIcon = (props) => (
     viewBox="0 0 32 32"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -482,11 +490,11 @@ export const UnityIcon = (props) => (
     viewBox="0 0 32 32"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
-      fill: "gray.500",
+      fill: "gray.600",
     }}
     {...props}
   >
@@ -499,7 +507,7 @@ export const BlenderIcon = (props) => (
     viewBox="0 0 32 32"
     boxSize={20}
     transition=".25s ease"
-    fill="black"
+    fill="#102847"
     _hover={{
       cursor: "pointer",
       transform: "scale(1.10)",
@@ -516,7 +524,7 @@ export const PhotoshopIcon = (props) => (
     viewBox="0 0 512 512"
     boxSize={20}
     transition=".25s ease"
-    background="black"
+    background="#102847"
     textColor="white"
     borderRadius="10px"
     _hover={{
@@ -537,7 +545,7 @@ export const PremiereIcon = (props) => (
     viewBox="0 0 512 512"
     boxSize={20}
     transition=".25s ease"
-    background="black"
+    background="#102847"
     textColor="white"
     borderRadius="10px"
     _hover={{

@@ -3,7 +3,7 @@ import { journey } from "./journeyEnum";
 
 export default () => {
   return (
-    <Flex minH="300px" mt="48px" bg="gray.100" paddingY="1.5em">
+    <Flex id="journey" minH="300px" mt="48px" bg="gray.100" paddingY="2em">
       <Flex w="100%" marginX="10%" direction="column">
         <Text fontSize="24px" fontWeight={600} mb="12px">
           Jornada
@@ -22,10 +22,26 @@ export default () => {
                   flexWrap="wrap"
                 >
                   <Box
-                    w={index == 0 ? "32px" : "22px"}
-                    h={index == 0 ? "32px" : "22px"}
-                    ml={index == 0 ? "0" : "5px"}
-                    bg={index == 0 ? "black" : "gray.600"}
+                    w={
+                      index == 0 && category?.title != "Complementar"
+                        ? "32px"
+                        : "22px"
+                    }
+                    h={
+                      index == 0 && category?.title != "Complementar"
+                        ? "32px"
+                        : "22px"
+                    }
+                    ml={
+                      index == 0 && category?.title != "Complementar"
+                        ? "0"
+                        : "5px"
+                    }
+                    bg={
+                      index == 0 && category?.title != "Complementar"
+                        ? "blue.800"
+                        : "gray.600"
+                    }
                     borderRadius="50%"
                   />
                   <Flex direction="column" gap="2px">
