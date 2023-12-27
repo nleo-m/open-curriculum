@@ -33,6 +33,7 @@ export default () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     mode: "onBlur",
@@ -55,6 +56,8 @@ export default () => {
           status: "success",
           isClosable: true,
         });
+
+        reset();
       })
       .catch(() => {
         toast({
