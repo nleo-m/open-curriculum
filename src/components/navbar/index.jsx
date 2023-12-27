@@ -12,7 +12,7 @@ import {
 
 export default () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)", { ssr: false });
-  const [isMenuCollapsed, setMenuCollapsed] = useState(false);
+  const [isMenuCollapsed, setMenuCollapsed] = useState(true);
 
   const navItems = [
     {
