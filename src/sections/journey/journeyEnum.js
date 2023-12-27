@@ -55,8 +55,8 @@ export const journey = [
         name: "CTF's Portswigger",
       },
       {
-        name: "Exposição artística",
-        place: "St. James, Muzik, Estúdio Viga"
+        name: "Exposições artísticas",
+        place: "St. James, Muzik, Estúdio Viga",
       },
       {
         name: "Desenvolvimento Web Moderna",
