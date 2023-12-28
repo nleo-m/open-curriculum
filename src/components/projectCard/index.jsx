@@ -17,10 +17,7 @@ import { EyeIcon } from "../../styles/icons/GeneralIcons";
 import { useTranslation } from "react-i18next";
 
 export default ({ img, name, description, tech, repo, preview }) => {
-  const {
-    t,
-    i18n: { language },
-  } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Card maxW="md" minW={{ base: "200px", md: "480px" }}>

@@ -16,7 +16,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 import emailjs from "@emailjs/browser";
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 export default () => {
@@ -69,10 +68,7 @@ export default () => {
       });
   };
 
-  const {
-    t,
-    i18n: { language },
-  } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Flex id="contact" minH="300px" mt="48px" paddingY="1em">

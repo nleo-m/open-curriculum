@@ -1,5 +1,3 @@
-import { Trans } from "react-i18next";
-
 export const journey = [
   {
     title: "professional",

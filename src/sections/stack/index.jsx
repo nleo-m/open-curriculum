@@ -1,12 +1,9 @@
-import { Box, Flex, Image, Text, Tooltip } from "@chakra-ui/react";
+import { Flex, Text, Tooltip } from "@chakra-ui/react";
 import { techStack } from "./techStackEnum";
 import { useTranslation } from "react-i18next";
 
 export default () => {
-  const {
-    t,
-    i18n: { language },
-  } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Flex id="tech" minH="300px" mt="48px" paddingY="1.5em">

@@ -1,20 +1,9 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  Image,
-  Text,
-  Tooltip,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Flex, Grid, Text } from "@chakra-ui/react";
 import { journey } from "./journeyEnum";
 import { useTranslation } from "react-i18next";
 
 export default () => {
-  const {
-    t,
-    i18n: { language },
-  } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Flex id="journey" minH="300px" mt="48px" bg="gray.100" paddingY="2em">
@@ -39,22 +28,22 @@ export default () => {
                 >
                   <Box
                     minW={
-                      index == 0 && category?.title != "complementary"
+                      index === 0 && category?.title !== "complementary"
                         ? "32px"
                         : "22px"
                     }
                     h={
-                      index == 0 && category?.title != "complementary"
+                      index === 0 && category?.title !== "complementary"
                         ? "32px"
                         : "22px"
                     }
                     ml={
-                      index == 0 && category?.title != "complementary"
+                      index === 0 && category?.title !== "complementary"
                         ? "0"
                         : "5px"
                     }
                     bg={
-                      index == 0 && category?.title != "complementary"
+                      index === 0 && category?.title !== "complementary"
                         ? "blue.800"
                         : "gray.600"
                     }

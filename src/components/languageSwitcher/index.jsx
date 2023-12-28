@@ -1,10 +1,10 @@
-import { Image } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-export default () => {
+import { Image } from "@chakra-ui/react";
+
+const Navbar = () => {
   const {
-    t,
     i18n: { language, changeLanguage },
   } = useTranslation();
 
@@ -20,6 +20,7 @@ export default () => {
 
   const getLangIcon = () => {
     const base = "/assets/imgs/lang/";
+
     switch (language) {
       case "br":
         setLangIcon(base + "pt-br.svg");
@@ -48,3 +49,5 @@ export default () => {
     )
   );
 };
+
+export default Navbar;

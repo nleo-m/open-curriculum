@@ -4,10 +4,7 @@ import { projects } from "./projectsEnum";
 import { useTranslation } from "react-i18next";
 
 export default () => {
-  const {
-    t,
-    i18n: { language },
-  } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Flex id="projects" minH="300px" mt="48px" paddingY="1em">
