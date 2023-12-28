@@ -1,15 +1,26 @@
 import { useState, useEffect } from "react";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { LocationIcon, EmailIcon } from "../../styles/icons/GeneralIcons";
+import { useTranslation } from "react-i18next";
 
 export default () => {
-  const occupations = [
-    "Programador Full-stack",
-    "UX Designer",
-    "Artista e Designer",
-    "Tatuador",
-    "Aspirante a escritor",
-  ];
+  const occupations = {
+    br: [
+      "Programador Full-stack",
+      "UX Designer",
+      "Artista e Designer",
+      "Tatuador",
+      "Aspirante a escritor",
+    ],
+    en: [
+      "Full-stack developer",
+      "UX Designer",
+      "Artist and Designer",
+      "Tattooer",
+      "Writer wannabe",
+    ],
+  };
+
   const [currentOccupation, setCurrentOccupation] = useState(false);
   const [occupationRender, setOcuppationRender] = useState("");
 
@@ -36,10 +47,10 @@ export default () => {
   };
 
   const nextOccupation = () => {
-    const currentIndex = occupations.indexOf(currentOccupation);
-    const nextIndex = (currentIndex + 1) % occupations.length;
+    const currentIndex = occupations[language].indexOf(currentOccupation);
+    const nextIndex = (currentIndex + 1) % occupations[language].length;
 
-    setCurrentOccupation(occupations[nextIndex]);
+    setCurrentOccupation(occupations[language][nextIndex]);
   };
 
   useEffect(() => {
@@ -49,6 +60,15 @@ export default () => {
   useEffect(() => {
     writeWithDelay(currentOccupation);
   }, [currentOccupation]);
+
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
+
+  useEffect(() => {
+    console.log(language);
+  }, [language]);
 
   return (
     <Flex
@@ -92,7 +112,7 @@ export default () => {
             </Text>
             <Flex align="center">
               <Text color="gray.100" fontSize="18px" mr="12px">
-                Raça:
+                {t("race")}:
               </Text>
               <Text
                 color="white"
@@ -104,15 +124,15 @@ export default () => {
                 Alien
               </Text>
               <Text color="white" fontSize="20px" fontWeight="bolder">
-                Humano
+                {t("human")}
               </Text>
             </Flex>
             <Flex gap="12px" align="center">
               <Text color="gray.100" fontSize="18px">
-                Classe:
+                {t("class")}:
               </Text>
               <Text color="blue.400" fontSize="20px" fontWeight="bolder">
-                {occupationRender}
+                {t(occupationRender)}
               </Text>
             </Flex>
             <Box position="relative" minH="10px" w="100%" mt="12px">
@@ -140,8 +160,7 @@ export default () => {
         <Flex gap="24px" align="center" maxW={{ base: "100%", lg: "60%" }}>
           <Flex direction="column" gap="7px">
             <Text color="white" fontSize="18px" mt="34px">
-              Criativo, dedicado e sempre disposto a aprender. Me contrata aí e
-              te faço o melhor macarrão na chapa (ou seu dinheiro de volta).
+              {t("about_desc")}
             </Text>
             <Flex align="center" mt="22px" gap="10px">
               <EmailIcon boxSize={7} fill="white" />
@@ -152,7 +171,7 @@ export default () => {
             <Flex align="center" mt="22px" gap="10px">
               <LocationIcon boxSize={8} fill="white" />
               <Text color="white" fontSize="18px">
-                Juiz de fora, Minas Gerais. Brasil.
+                Juiz de fora, Minas Gerais. {t("br")}.
               </Text>
             </Flex>
           </Flex>

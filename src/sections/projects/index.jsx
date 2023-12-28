@@ -1,13 +1,19 @@
 import { Button, Center, Flex, Link, Text } from "@chakra-ui/react";
 import ProjectCard from "../../components/projectCard";
 import { projects } from "./projectsEnum";
+import { useTranslation } from "react-i18next";
 
 export default () => {
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
+
   return (
     <Flex id="projects" minH="300px" mt="48px" paddingY="1em">
       <Flex w="100%" marginX="10%" direction="column">
         <Text fontSize="24px" fontWeight={600} mb="12px">
-          Alguns dos meus projetos
+          {t("my_projects")}
         </Text>
         <Flex gap="32px" flexWrap="wrap" justify="center" mb="24px">
           {projects?.map((p) => (
@@ -24,7 +30,7 @@ export default () => {
               marginY="1em"
               colorScheme="blue"
             >
-              Ver mais
+              {t("see_more")}
             </Button>
           </Link>
         </Center>

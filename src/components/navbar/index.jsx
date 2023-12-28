@@ -1,5 +1,6 @@
-import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import { useState } from "react";
+
+import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import {
   CloseIcon,
   EmailIcon,
@@ -10,33 +11,39 @@ import {
   TechIcon,
 } from "../../styles/icons/GeneralIcons";
 
+import { useTranslation } from "react-i18next";
+
 export default () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)", { ssr: false });
   const [isMenuCollapsed, setMenuCollapsed] = useState(true);
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
 
   const navItems = [
     {
-      name: "Sobre",
+      name: t("about"),
       anchor: "header",
       icon: <ProfileIcon fill="gray.100" mr="6px" boxSize={6} />,
     },
     {
-      name: "Tech",
+      name: t("tech"),
       anchor: "tech",
       icon: <TechIcon fill="gray.100" mr="6px" boxSize={6} />,
     },
     {
-      name: "Jornada",
+      name: t("journey"),
       anchor: "journey",
       icon: <PinPointIcon fill="gray.100" mr="6px" boxSize={6} />,
     },
     {
-      name: "Projetos",
+      name: t("projects"),
       anchor: "projects",
       icon: <ProjectsIcon fill="gray.100" mr="6px" boxSize={6} />,
     },
     {
-      name: "Contato",
+      name: t("contact"),
       anchor: "contact",
       icon: <EmailIcon fill="gray.100" mr="6px" boxSize={6} />,
     },

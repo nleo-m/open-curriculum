@@ -14,7 +14,14 @@ import {
 import { GitIcon } from "../../styles/icons/StackIcons";
 import { EyeIcon } from "../../styles/icons/GeneralIcons";
 
+import { useTranslation } from "react-i18next";
+
 export default ({ img, name, description, tech, repo, preview }) => {
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
+
   return (
     <Card maxW="md" minW={{ base: "200px", md: "480px" }}>
       <CardBody>
@@ -22,10 +29,10 @@ export default ({ img, name, description, tech, repo, preview }) => {
         <VStack mt="6" spacing="3">
           <Heading size="md">{name}</Heading>
           <Flex direction="column" gap="10px">
-            <Text>{description}</Text>
+            <Text>{t(description)}</Text>
 
             <Text color="gray.600" textAlign="left">
-              Tecnologias: {tech}
+              {t("technologies")}: {tech}
             </Text>
           </Flex>
         </VStack>

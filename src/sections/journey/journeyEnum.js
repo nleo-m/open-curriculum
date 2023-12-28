@@ -1,65 +1,67 @@
+import { Trans } from "react-i18next";
+
 export const journey = [
   {
-    title: "Profissional",
+    title: "professional",
     items: [
       {
-        name: "Programador Full-stack",
+        name: "full_dev",
         place: "Health ID",
         date: "05/2021 - 12/2023",
       },
       {
-        name: "Técnico de Informática",
+        name: "comp_tech",
         place: "IBX Informática",
         date: "05/2021 - 12/2023",
       },
       {
-        name: "Professor substituto de programação",
+        name: "sub_teacher",
         place: "Happy code",
         date: "05/2021 - 12/2023",
       },
       {
-        name: "Freelancing Artes e Design",
+        name: "freela_art",
         date: "01/2019 - 12/2021",
       },
       {
-        name: "Garçom",
+        name: "waiter",
         place: "Sublime espaço gourmet",
         date: "05/2021 - 12/2023",
       },
     ],
   },
   {
-    title: "Acadêmica",
+    title: "academic",
     items: [
       {
-        name: "Engenharia de Software",
+        name: "software_engineering",
         place: "Uniacademia",
         date: "05/2021 - 12/2023",
       },
       {
-        name: "EaD Sistemas de informação",
+        name: "ead_info_sys",
         place: "Estácio de Sá",
         date: "05/2021 - 12/2023",
       },
       {
-        name: "B.I em Artes e Design",
+        name: "bi_arts_design",
         place: "UFJF",
         date: "05/2021 - 12/2023",
       },
     ],
   },
   {
-    title: "Complementar",
+    title: "complementary",
     items: [
       {
         name: "CTF's Portswigger",
       },
       {
-        name: "Exposições artísticas",
-        place: "St. James, Muzik, Estúdio Viga",
+        name: "art_expos",
+        place: "St. James, Muzik, Studio Viga",
       },
       {
-        name: "Desenvolvimento Web Moderna",
+        name: "modern_web_dev",
         place: "Udemy - Cod3r",
         date: "2021",
       },

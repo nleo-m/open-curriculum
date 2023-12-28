@@ -17,6 +17,7 @@ import * as yup from "yup";
 
 import emailjs from "@emailjs/browser";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default () => {
   const validationSchema = yup.object().shape({
@@ -68,6 +69,11 @@ export default () => {
       });
   };
 
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
+
   return (
     <Flex id="contact" minH="300px" mt="48px" paddingY="1em">
       <Flex
@@ -78,7 +84,7 @@ export default () => {
         align="center"
       >
         <Text fontSize="24px" fontWeight={600} mb="12px">
-          Entre em contato
+          {t("get_in_touch")}
         </Text>
 
         <Flex
@@ -96,7 +102,7 @@ export default () => {
         >
           <form style={{ width: 80 + "%" }} onSubmit={handleSubmit(onSubmit)}>
             <FormControl mb="12px" isInvalid={errors.name}>
-              <FormLabel>Nome*</FormLabel>
+              <FormLabel>{t("name")}*</FormLabel>
               <Input
                 borderColor="gray.300"
                 maxLength={128}
@@ -110,7 +116,7 @@ export default () => {
               )}
             </FormControl>
             <FormControl mb="12px" isInvalid={errors.email}>
-              <FormLabel>E-mail*</FormLabel>
+              <FormLabel>{t("email")}*</FormLabel>
               <Input
                 borderColor="gray.300"
                 maxLength={255}
@@ -125,7 +131,7 @@ export default () => {
               )}
             </FormControl>
             <FormControl mb="12px" isInvalid={errors.subject}>
-              <FormLabel>Assunto*</FormLabel>
+              <FormLabel>{t("subject")}*</FormLabel>
               <Input
                 borderColor="gray.300"
                 maxLength={255}
@@ -136,7 +142,7 @@ export default () => {
               />
             </FormControl>
             <FormControl mb="12px" isInvalid={errors.body}>
-              <FormLabel>Mensagem*</FormLabel>
+              <FormLabel>{t("message")}*</FormLabel>
               <Textarea
                 borderColor="gray.300"
                 resize="vertical"
@@ -160,7 +166,7 @@ export default () => {
                 colorScheme="blue"
                 type="submit"
               >
-                Enviar
+                {t("send")}
               </Button>
             </Center>
           </form>
