@@ -10,12 +10,12 @@ export const journey = [
       {
         name: "comp_tech",
         place: "IBX Informática",
-        date: "05/2021 - 12/2023",
+        date: "10/2020 - 12/2020",
       },
       {
         name: "sub_teacher",
         place: "Happy code",
-        date: "05/2021 - 12/2023",
+        date: "10/2019 - 12/2019",
       },
       {
         name: "freela_art",
@@ -24,7 +24,7 @@ export const journey = [
       {
         name: "waiter",
         place: "Sublime espaço gourmet",
-        date: "05/2021 - 12/2023",
+        date: "12/2017 - 01/2018",
       },
     ],
   },
@@ -34,17 +34,17 @@ export const journey = [
       {
         name: "software_engineering",
         place: "Uniacademia",
-        date: "05/2021 - 12/2023",
+        date: "07/2023 - 12/2027",
       },
       {
         name: "ead_info_sys",
         place: "Estácio de Sá",
-        date: "05/2021 - 12/2023",
+        date: "07/2018 - 07/2020",
       },
       {
         name: "bi_arts_design",
         place: "UFJF",
-        date: "05/2021 - 12/2023",
+        date: "01/2018 - 06/2018",
       },
     ],
   },
