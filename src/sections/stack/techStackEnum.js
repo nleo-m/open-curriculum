@@ -32,7 +32,7 @@ import {
 
 export const techStack = [
   {
-    title: "Linguagens e Tecnologias que utilizo ou já trabalhei",
+    title: "tech_stack",
     items: [
       {
         name: "React",
@@ -132,7 +132,7 @@ export const techStack = [
     ],
   },
   {
-    title: "Ferramentas e plataformas que utilizo ou já utilizei",
+    title: "tools_stack",
     items: [
       {
         name: "Postman",
