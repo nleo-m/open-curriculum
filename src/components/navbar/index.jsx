@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
+import { Box, Flex, Text, useMediaQuery, Image } from "@chakra-ui/react";
 import {
   CloseIcon,
   EmailIcon,
@@ -12,14 +12,13 @@ import {
 } from "../../styles/icons/GeneralIcons";
 
 import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../languageSwitcher";
 
 export default () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)", { ssr: false });
   const [isMenuCollapsed, setMenuCollapsed] = useState(true);
-  const {
-    t,
-    i18n: { language },
-  } = useTranslation();
+
+  const { t } = useTranslation();
 
   const navItems = [
     {
@@ -63,7 +62,13 @@ export default () => {
       position="fixed"
       zIndex={2}
     >
-      <Flex w="100%" marginX="10%" color="white" justify="space-between">
+      <Flex
+        w="100%"
+        marginX="10%"
+        color="white"
+        justify="space-between"
+        align="center"
+      >
         <Text>Hello world!</Text>
         {!isMobile && (
           <Flex gap="32px" direction={{ base: "column", md: "row" }}>
@@ -80,6 +85,7 @@ export default () => {
                 </Text>
               </Flex>
             ))}
+            <LanguageSwitcher />
           </Flex>
         )}
       </Flex>
@@ -114,22 +120,26 @@ export default () => {
               </Flex>
             ))}
           </Flex>
+          <LanguageSwitcher />
           <CloseIcon
             onClick={() => setMenuCollapsed(true)}
             boxSize={12}
             fill="white"
-            mr="24px"
+            marginX="24px"
           />
         </>
       )}
 
       {isMobile && isMenuCollapsed && (
-        <HamburguerIcon
-          onClick={() => setMenuCollapsed(false)}
-          boxSize={12}
-          fill="white"
-          mr="24px"
-        />
+        <>
+          <LanguageSwitcher />
+          <HamburguerIcon
+            onClick={() => setMenuCollapsed(false)}
+            boxSize={12}
+            fill="white"
+            marginX="24px"
+          />
+        </>
       )}
     </Flex>
   );

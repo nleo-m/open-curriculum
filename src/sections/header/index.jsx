@@ -4,22 +4,16 @@ import { LocationIcon, EmailIcon } from "../../styles/icons/GeneralIcons";
 import { useTranslation } from "react-i18next";
 
 export default () => {
-  const occupations = {
-    br: [
-      "Programador Full-stack",
-      "UX Designer",
-      "Artista e Designer",
-      "Tatuador",
-      "Aspirante a escritor",
-    ],
-    en: [
-      "Full-stack developer",
-      "UX Designer",
-      "Artist and Designer",
-      "Tattooer",
-      "Writer wannabe",
-    ],
-  };
+  const { t } = useTranslation();
+
+  const occupations = [
+    t("full_dev"),
+    t("ux_designer"),
+    t("cybersec_enthusiast"),
+    t("artist_designer"),
+    t("tattooer"),
+    t("writer_wannabe"),
+  ];
 
   const [currentOccupation, setCurrentOccupation] = useState(false);
   const [occupationRender, setOcuppationRender] = useState("");
@@ -47,10 +41,10 @@ export default () => {
   };
 
   const nextOccupation = () => {
-    const currentIndex = occupations[language].indexOf(currentOccupation);
-    const nextIndex = (currentIndex + 1) % occupations[language].length;
+    const currentIndex = occupations.indexOf(currentOccupation);
+    const nextIndex = (currentIndex + 1) % occupations.length;
 
-    setCurrentOccupation(occupations[language][nextIndex]);
+    setCurrentOccupation(occupations[nextIndex]);
   };
 
   useEffect(() => {
@@ -60,15 +54,6 @@ export default () => {
   useEffect(() => {
     writeWithDelay(currentOccupation);
   }, [currentOccupation]);
-
-  const {
-    t,
-    i18n: { language },
-  } = useTranslation();
-
-  useEffect(() => {
-    console.log(language);
-  }, [language]);
 
   return (
     <Flex
