@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { LocationIcon, EmailIcon } from "../../styles/icons/GeneralIcons";
 import { useTranslation } from "react-i18next";
+import Expbar from "../../components/expbar";
 
 export default () => {
   const { t } = useTranslation();
@@ -116,30 +117,17 @@ export default () => {
               <Text color="gray.100" fontSize="18px">
                 {t("class")}:
               </Text>
-              <Text color="blue.400" fontSize="20px" fontWeight="bolder">
+              <Text
+                color="blue.400"
+                fontSize="20px"
+                fontWeight="bolder"
+                alignSelf="flex-start"
+                h="24px"
+              >
                 {t(occupationRender)}
               </Text>
             </Flex>
-            <Box position="relative" minH="10px" w="100%" mt="12px">
-              <Text color="white" textAlign="end">
-                nv. {new Date().getFullYear() - 1999}
-              </Text>
-              <Box
-                position="absolute"
-                bg="blue.400"
-                minH="10px"
-                w="30%"
-                borderRadius="2px"
-                zIndex={1}
-              ></Box>
-              <Box
-                position="absolute"
-                bg="#13243B"
-                minH="10px"
-                w="100%"
-                borderRadius="2px"
-              ></Box>
-            </Box>
+            <Expbar />
           </Flex>
         </Flex>
         <Flex gap="24px" align="center" maxW={{ base: "100%", lg: "60%" }}>
