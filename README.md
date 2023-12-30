@@ -7,5 +7,5 @@ This is my portfolio website, here you'll find some useful information of myself
 ---
 
 <div align="center">
-  <img src="/assets/imgs/open_curriculum_preview.png" width="100%" />
+  <img src="/public/assets/imgs/open_curriculum_preview.png" width="100%" />
 </div>
