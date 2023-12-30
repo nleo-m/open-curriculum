@@ -11,6 +11,7 @@ import {
   FigmaIcon,
   GitIcon,
   GithubIcon,
+  GraphQLIcon,
   HTMLIcon,
   JWTIcon,
   JavascriptIcon,
@@ -68,6 +69,11 @@ export const techStack = [
         name: "CSS3",
         icon: <CSSIcon />,
         url: "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
+      },
+      {
+        name: "Graphql",
+        icon: <GraphQLIcon />,
+        url: "https://graphql.org/",
       },
       {
         name: "PHP",
