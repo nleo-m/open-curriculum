@@ -3,6 +3,8 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { LocationIcon, EmailIcon } from "../../styles/icons/GeneralIcons";
 import { useTranslation } from "react-i18next";
 import Expbar from "../../components/expbar";
+import { motion } from "framer-motion";
+import { fadeInAnimation } from "../../styles/animations";
 
 export default () => {
   const { t } = useTranslation();
@@ -84,6 +86,8 @@ export default () => {
             w="200px"
             h="210px"
             borderRadius="12px"
+            as={motion.div}
+            animation={fadeInAnimation}
           >
             <Image
               src="/assets/imgs/profile_pic.jpeg"
