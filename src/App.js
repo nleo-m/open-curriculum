@@ -7,11 +7,13 @@ import Journey from "./sections/journey";
 import Projects from "./sections/projects";
 import Contact from "./sections/contact";
 import Footer from "./components/footer";
+import { motion } from "framer-motion";
+import { fadeInAnimation } from "./styles/animations";
 
 function App() {
   return (
     <ChakraProvider>
-      <Flex direction="column">
+      <Flex direction="column" as={motion.div} animation={fadeInAnimation}>
         <Navbar />
         <Header />
         <Stack />
