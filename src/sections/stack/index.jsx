@@ -1,6 +1,7 @@
 import { Flex, Text, Tooltip } from "@chakra-ui/react";
 import { techStack } from "./techStackEnum";
 import { useTranslation } from "react-i18next";
+import { ScaleUpBox } from "../../styles/animations";
 
 export default () => {
   const { t } = useTranslation();
@@ -16,11 +17,13 @@ export default () => {
             <Text fontSize="21px">{t(category?.title)}</Text>
             <Flex gap="24px" marginY="12px" flexWrap="wrap">
               {category.items.map((i) => (
-                <Tooltip openDelay={550} label={i?.name}>
-                  <a target="blank" href={i?.url}>
-                    {i?.icon}
-                  </a>
-                </Tooltip>
+                <ScaleUpBox transitionTime=".5s">
+                  <Tooltip openDelay={550} label={i?.name}>
+                    <a target="blank" href={i?.url}>
+                      {i?.icon}
+                    </a>
+                  </Tooltip>
+                </ScaleUpBox>
               ))}
             </Flex>
           </>
