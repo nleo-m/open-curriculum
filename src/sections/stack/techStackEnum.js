@@ -26,6 +26,7 @@ import {
   PythonIcon,
   ReactIcon,
   ReactNativeIcon,
+  ReactRouterIcon,
   TrelloIcon,
   UnityIcon,
   VueIcon,
@@ -75,6 +76,7 @@ export const techStack = [
         icon: <GraphQLIcon />,
         url: "https://graphql.org/",
       },
+
       {
         name: "PHP",
         icon: <PHPIcon />,
@@ -114,6 +116,11 @@ export const techStack = [
         name: "ContextAPI",
         icon: <ContextIcon />,
         url: "https://legacy.reactjs.org/docs/context.html",
+      },
+      {
+        name: "React Router",
+        icon: <ReactRouterIcon />,
+        url: "https://reactrouter.com/",
       },
       {
         name: "Express Server",
