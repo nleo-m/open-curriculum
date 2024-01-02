@@ -1,13 +1,24 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, useStatStyles } from "@chakra-ui/react";
 import { ScaleToRightBox } from "../../styles/animations";
+import { useEffect, useState } from "react";
 
 export default () => {
-  const birthdate = 1999;
+  const birthdate = new Date(1999, 9, 14, 12);
+
+  const getDateDiff = (d1 = birthdate, d2 = new Date()) => {
+    const diffInMilliseconds = (d2.getTime() - d1.getTime()) / 1000;
+    const diffInDays = diffInMilliseconds / (3600 * 24);
+    const diffInYears = diffInDays / 360;
+
+    return Math.abs(Math.floor(diffInYears));
+  };
+
+  const [level, setLevel] = useState(getDateDiff(birthdate));
 
   return (
     <Box position="relative" minH="10px" w="100%" mt="12px">
       <Text color="white" textAlign="end">
-        nv. {new Date().getFullYear() - birthdate}
+        nv. {level}
       </Text>
       <ScaleToRightBox
         transitionTime="1.25s"
