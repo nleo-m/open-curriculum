@@ -5,7 +5,7 @@ export const journey = [
       {
         name: "full_dev",
         place: "Health ID",
-        date: "05/2021 - 12/2023",
+        date: "05/2021 - 02/2024",
       },
       {
         name: "comp_tech",
