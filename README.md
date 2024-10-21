@@ -1,9 +1,11 @@
-# Leonel Marcos F J | Open Curriculum
+# Leonel Marcos F J | Portfolio [OLD]
 
-This is my portfolio website, here you'll find some useful information of myself, tech that I use and how to get in touch with me.  
-You can change language by clicking in the flag icon on the right corner of the navbar. Available languages: English, Brazilian Portuguese and French.
+### This is an old portfolio, please check the new one: https://github.com/nleo-m/portfolio
+### Preview link: https://mfjleonel.vercel.app   
 
-#### Preview link: https://leonel-curriculum.vercel.app
+---
+  
+If you still wanna check the old one: https://open-curriculum.vercel.app/
 
 ---
 
